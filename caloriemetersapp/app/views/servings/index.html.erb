@@ -1,0 +1,27 @@
+<h1>Listing servings</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Serving size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servings.each do |serving| %>
+      <tr>
+        <td><%= serving.serving_size %></td>
+        <td><%= link_to 'Show', serving %></td>
+        <td><%= link_to 'Edit', edit_serving_path(serving) %></td>
+        <td><%= link_to 'Destroy', serving, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Serving', new_serving_path %>

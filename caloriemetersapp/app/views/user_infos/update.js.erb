@@ -1,0 +1,5 @@
+
+$('#userinfo').html("<%= escape_javascript(render 'userinfo') %>");
+$('#usercalorielist').html("<%= escape_javascript(render 'usercaloriedatalist') %>");
+
+$('#userinfo tr:last').effect('highlight');

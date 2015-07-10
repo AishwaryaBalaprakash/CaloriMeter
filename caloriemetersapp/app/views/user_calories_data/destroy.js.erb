@@ -1,0 +1,5 @@
+$('#tracklist').html("<%= escape_javascript(render 'usercaloriedatalist') %>");
+$('#tracklist tr:last').effect('highlight');
+
+$('#usercalorielist').html("<%= escape_javascript(render 'usercaloriedatalist') %>");
+$('#usercalorielist tr:last').effect('highlight');

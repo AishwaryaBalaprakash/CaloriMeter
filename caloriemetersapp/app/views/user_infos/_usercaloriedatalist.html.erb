@@ -1,0 +1,24 @@
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    
+    <th>Date tracked</th>
+    <th>Target</th>
+    <th>Consumed Calories</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  
+  <% @user_info.user_calories_datum.each do |user_calories_datum| %>
+      <tr>       
+        <td><%= user_calories_datum.date_tracked %></td>
+        <td><%= user_calories_datum.target%></td>
+        <td><%= user_calories_datum.consumed_calories%></td>  
+        <td><%= link_to 'Delete', user_calories_datum, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %></td>
+      </tr> 
+  <% end %>
+  
+  </tbody>
+</table>

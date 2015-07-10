@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  gender: Male
+  height: 1
+  dob: 2013-08-08 07:32:14
+  weight: 1
+
+two:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  gender: MyString
+  height: 1
+  dob: 2013-08-08 07:32:14
+  weight: 1

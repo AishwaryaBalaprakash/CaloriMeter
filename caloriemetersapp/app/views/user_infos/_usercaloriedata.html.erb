@@ -1,0 +1,35 @@
+<h3> Track Data<h3>
+<%= form_for(@user_calories_datum, :remote => true) do |f|%>
+  
+   <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_tracked %><br>
+    <%= f.datetime_select :date_tracked %>
+  </div>
+  <div class="field">
+    <%= f.label :target %><br>
+    <%= f.number_field :target %>
+  </div>
+  <div class="field">
+    <%= f.label :consumed_calories %><br>
+    <%= f.number_field :consumed_calories %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+ <% end %>

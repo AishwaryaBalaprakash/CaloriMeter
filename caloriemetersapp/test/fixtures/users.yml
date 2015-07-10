@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: deepa
+  password_hash: balu
+  password_salt: balu
+
+two:
+  email: megha
+  password_hash: nair
+  password_salt: nair

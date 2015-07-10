@@ -1,0 +1,5 @@
+$('#user_infolist').effect('shake');
+$('#error').html("<%= escape_javascript(@user_info.errors.full_messages.join(',')) %>");
+$('#error').fadeIn();
+setTimeout(function() { $('#error').fadeOut(); }, 2000);
+

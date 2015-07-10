@@ -1,0 +1,24 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Menu List</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+    <% restaurant.menu.each do |menu| %>
+      <tr>
+         <td><%= menu.menu_item %></td>
+        <td><%= menu.calories %></td>
+        <td><%= menu.restaurant.restaurant_name %></td>        
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Delete', menu, :controller =>"menu", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>

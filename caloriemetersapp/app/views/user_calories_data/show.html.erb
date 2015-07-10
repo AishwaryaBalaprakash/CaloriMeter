@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User info:</strong>
+  <%= @user_calories_datum.user_info_id %>
+</p>
+
+<p>
+  <strong>Date tracked:</strong>
+  <%= @user_calories_datum.date_tracked %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @user_calories_datum.target %>
+</p>
+
+<p>
+  <strong>Consumed calories:</strong>
+  <%= @user_calories_datum.consumed_calories %>
+</p>
+
+<%= link_to 'Edit', edit_user_calories_datum_path(@user_calories_datum) %> |
+<%= link_to 'Back', user_calories_data_path %>

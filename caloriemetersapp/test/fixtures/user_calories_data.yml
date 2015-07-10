@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_info_id: 1
+  date_tracked: 2013-08-08 07:32:34
+  target: 1
+  consumed_calories: 1
+
+two:
+  user_info_id: 1
+  date_tracked: 2013-08-08 07:32:34
+  target: 1
+  consumed_calories: 1

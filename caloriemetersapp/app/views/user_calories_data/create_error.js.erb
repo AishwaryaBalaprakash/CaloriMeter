@@ -1,0 +1,5 @@
+$('#calorie_datalist').effect('shake');
+$('#error').html("<%= escape_javascript(@user_calories_datum.errors.full_messages.join(',')) %>");
+$('#error').fadeIn();
+setTimeout(function() { $('#error').fadeOut(); }, 2000);
+

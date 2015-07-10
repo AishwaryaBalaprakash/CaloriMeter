@@ -1,0 +1,33 @@
+<%= form_for(@user_calories_datum, :remote => true) do |f| %>
+  <% if @user_calories_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_calories_datum.errors.count, "error") %> prohibited this user_calories_datum from being saved:</h2>
+
+      <ul>
+      <% @user_calories_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_info_id %><br>
+    <%= f.number_field :user_info_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_tracked %><br>
+    <%= f.datetime_select :date_tracked %>
+  </div>
+  <div class="field">
+    <%= f.label :target %><br>
+    <%= f.number_field :target %>
+  </div>
+  <div class="field">
+    <%= f.label :consumed_calories %><br>
+    <%= f.number_field :consumed_calories %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

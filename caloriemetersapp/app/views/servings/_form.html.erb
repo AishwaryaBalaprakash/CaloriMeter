@@ -1,0 +1,21 @@
+<%= form_for(@serving) do |f| %>
+  <% if @serving.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@serving.errors.count, "error") %> prohibited this serving from being saved:</h2>
+
+      <ul>
+      <% @serving.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :serving_size %><br>
+    <%= f.text_field :serving_size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

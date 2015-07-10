@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> CalorieMeter</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+         
+          <nav>
+            <ul class="nav pull-right">
+             
+              
+              <li><% if current_user %><%= link_to "Log out", log_out_path %></li>
+              <li><%= link_to "Search by restaurant", :controller=>'restaurants', :action=> 'search' , :id=> 'user_info'%>&nbsp</li>
+              
+               <li><%= link_to "Home", root_path%> &nbsp</li>
+		
+              <ul>Logged in as <%= current_user.email %></ul></li>
+              <% else %><li><%= link_to "Sign up", sign_up_path %></li>
+              or <li><%= link_to "Log in", log_in_path %>
+  	      <% end %>
+  	      
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+    </header>
+    <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+    <div class="container">
+      <%= yield %>
+    </div>
+      <a>
+  <footer>
+    &copy; 2013 CalorieMeter
+  </footer>
+  </a>
+  </body>
+</html>

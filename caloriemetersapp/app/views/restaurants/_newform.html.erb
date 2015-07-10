@@ -1,0 +1,8 @@
+<h3>Search</h3>
+  <%= form_tag '/restaurants/search_by_restaurant' do%>
+   <div class="field">
+     Restaurant name :      
+        <%= select_tag(:restaurant_name, options_for_select(Restaurant.all.map { |city| [city.restaurant_name, city.id] })) %>
+         </div>
+      <%= submit_tag "Search" %> 
+ <% end %>
